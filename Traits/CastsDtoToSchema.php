@@ -59,7 +59,7 @@ trait CastsDtoToSchema
 
         $dataObject = (new ReflectionClass($className))->newInstanceWithoutConstructor();
 
-        return assert_instance($dataObject, Data::class)->getValidationRules([]);
+        return $dataObject->getValidationRules([]);
     }
 
     /**
